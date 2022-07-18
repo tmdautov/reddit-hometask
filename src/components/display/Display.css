@@ -1,0 +1,62 @@
+.ship-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ship-item {
+  display: flex;
+  margin-top: 10px;
+}
+
+.shape-item-state {
+  display: flex;
+  padding: 5px;
+  margin-right: -5px;
+  align-items: stretch;
+}
+
+.players {
+  display: flex;
+}
+
+.player-score {
+  padding: 0 15px 0;
+  text-align: center;
+  color: rgb(72, 72, 72);
+  flex-grow: 1;
+}
+
+.player-score-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.display-container {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.ship-item-hit {
+  background: url('/public/assets/img/hit_small.png') no-repeat center;
+  background-size: 100%;
+  height: 30px;
+  width: 30px;
+}
+
+.ship-item-miss {
+  background: url('/public/assets/img/miss_small.png') no-repeat center;
+  background-size: 100%;
+  height: 30px;
+  width: 30px;
+}
+
+.aircraft {
+  background: url('/public/assets/img/aircraft_shape.png') no-repeat center;
+  background-size: 70%;
+  width: 100%;
+  height: 100px;
+}
+

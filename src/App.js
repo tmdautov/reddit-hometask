@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import myData from "./data/data.json";
+
+import Grid from "./components/grid/Grid"
+import Display from "./components/display/Display"
+
 
 function App() {
+  const [shapeState, setShapeState] = useState({});
+
+  const onCellClick = (data) => {
+    setShapeState(data)
+  }
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Battleship game</h1>
+      <div className="layout">
+        <div className="item"><Display shapes={myData.layout} shipState={shapeState} shipTypes={myData.shipTypes}></Display> </div>
+        <div className="item"><Grid shapes={myData} handleClick={(data) => onCellClick(data)}></Grid></div>        
+      </div>      
     </div>
   );
 }
